@@ -33,7 +33,7 @@ def set_up_the_game():
 def check_players(players, players_tags):
     for p in players_tags:
         if players[p] == []:
-            print(f"Победил {p + 1} игрок!")
+            print(f"Победил {termcolor.colored(p + 1, "light-yellow")} игрок!")
             players.pop(p)
             players_tags.remove(p)
             return True
@@ -114,7 +114,7 @@ def main():
     os.system("cls")
     while len(players_tags) > 1:
         current_player = players_tags[a % len(players_tags)]
-        input(f"\nХодит {current_player + 1} игрок.\n{termcolor.colored("(Нажмите Enter для начала хода)", "light_yellow")}")
+        input(f"\nХодит {termcolor.colored(current_player + 1, "light_yellow")} игрок.\n{termcolor.colored("(Нажмите Enter для начала хода)", "light_yellow")}")
         if skip > 0:
             print_my_cards(players, current_player)
             print(f"Верхняя карта: {termcolor.colored(top[0], top[1])}")
