@@ -41,10 +41,10 @@ def check_players(players, players_tags):
 
 
 def print_my_cards(players, player_index):
-        print(f"Ваши карты: ", end="")
-        for card in players[player_index]:
-            print(termcolor.colored(card[0], card[1]), end=" ")
-        print()
+    print(f"Ваши карты: ", end="")
+    for card in players[player_index]:
+        print(termcolor.colored(card[0], card[1]), end=" ")
+    print()
 
 
 def check_many_cards(cards, top):
@@ -67,7 +67,7 @@ def do_a_turn(selected_cards, players, current_player, bank, top):
     for card in selected_cards:
         bank.append(card)
     return top
-        
+
 
 def set_new_color(top):
     new_color = input("Введите цвет, который хотите установить (red, blue, yellow, green): ")
@@ -203,7 +203,6 @@ def main():
         os.system("cls")
         a += b
         check_players(players, players_tags)
-
 
 
 if __name__ == "__main__":
